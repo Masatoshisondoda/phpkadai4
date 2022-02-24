@@ -21,7 +21,10 @@ $output = "";
 
 foreach ($result as $record) {
     $output .= "
-    <div class='ui card'>
+    
+    <div class='four wide column'>
+    <div class='doubling grid'>
+    <div class='ui card notecontents'>
   <a class='image' href= 'note.php?id={$record["id"]}'>
     <img class='ui medium image' src=notehome.jpeg>
   </a>
@@ -31,6 +34,8 @@ foreach ($result as $record) {
       <a href='delete.php?id={$record["id"]}' onclick=hoge();>delete</a>
     </div>
   </div>
+</div>
+</div>
 </div>
   ";
 }
@@ -106,11 +111,13 @@ foreach ($idname as $record) {
         </div>
     </div>
     <h2 class="ui header"></h2>
-    <div class=four wide column>
-        <div class="ui grid">
+    <div class='ui three column doubling stackable grid container'>
+     <div class="four wide column">
+        <div class="ui grid center aligned">
             <?= $output ?>
         </div>
     </div>
+</div>
     <?= $idnamearray ?>
     <dialog id=deleteDialog>
 

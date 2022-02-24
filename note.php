@@ -77,6 +77,8 @@ if ($id == null) {
 </head>
 
 <body>
+
+
     <header>
         <dialog>
             <form method="post" action="notename_update.php" class=dialog>
@@ -90,31 +92,31 @@ if ($id == null) {
             </form>
             <button id="dialogClose">☓</button>
         </dialog>
-        <div class="sticky">
-        <div class="ui large menu">
-            <a href=home.php class="item">
-                <i class="big arrow alternate circle left icon"></i>
-            </a>
-            <a id="noteCreate" class="item">
-                <?= $record['notename'] ?>
-            </a>
-            <div class="right menu">
-                <div class="item">
-                    <div>
-                        <input type="text" placeholder="Search">
-                        <i class="search icon"></i>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui primary button" id="save">保存</div>
+
+
+    </header>
+    <div class="ui large menu ui fixed inverted menu">
+        <a href=home.php class="item">
+            <i class="big arrow alternate circle left icon"></i>
+        </a>
+        <a id="noteCreate" class="item">
+            <?= $record['notename'] ?>
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div>
+                    <input type="text" placeholder="Search">
+                    <i class="search icon"></i>
                 </div>
             </div>
+            <div class="item">
+                <div class="ui primary button" id="save">保存</div>
+            </div>
         </div>
-</div>
-    </header>
+    </div>
 
-    <div class=note>
 
+    <div class=note style="margin:85px">
         <div class="paper">
             <div class="lines">
                 <div class="text">
@@ -129,7 +131,6 @@ if ($id == null) {
                 <div class="holes hole-bottom"></div>
             </div>
             <div id=editCan class=editCan></div>
-
 
 
         </div>
